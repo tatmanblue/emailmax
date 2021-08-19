@@ -1,0 +1,37 @@
+I........How do I setup Emailmax to receive email?
+II.......What is POP?
+III......What is SMTP?
+IV.......When can the SMPT/POP server be different?
+
+
+I   How do I setup Emailmax to receive email?
+
+1) After starting Emailmax, select FILE from the menu and then select SETUP. This will open another window.  
+2) Click on the RECEIVING EMAIL tab.
+3) Click on the NEW button
+4) Where the screen says EMAIL ADDRESS, type your complete email address.  It should appear like myname@myisp.com
+5) Where the screen says SERVER/POP name type the server you get your email from. In most cases, this is the text to the right of the @ in your email address. (See also: When can the SMPT/POP server be different? topic)
+6) Where the screen says PASSWORD, type the password to your account.
+7) Click on the SAVE button
+8) Click on the OK button
+Now you should be able to receive email from that account.
+
+
+
+II  When can the SMTP/POP server be different?
+
+There are several reasons why the SMTP or POP may be different than your email account.  Mainly it has to do with security.  
+
+One of the most common reasons it can be different, is if you connected to the interent through a provider other than one that setup the account for you.   Many providers will  examine the TCP packets for a destination IP that belongs to there IP group and will reject access to those who are not part of the group.  
+
+
+
+III What is POP?
+
+POP stands for Post Office Protocol and is used to store received email messages until you can retrieve and remove them from the computer.
+
+
+
+IV  What is SMTP?
+
+SMTP stands for Simple Mail Transfer Protocol.  Computers that support SMTP are used to send email through the internet.

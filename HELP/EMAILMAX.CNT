@@ -1,0 +1,17 @@
+:Base emailmax.hlp
+:Title Emailmax 2K Help File
+1 Table of Contents=KEY_CONTENTS
+1 Getting Started=KEY_GETSTARTED
+1 Whats New?
+2 In This Release=KEY_WHATS_NEW
+2 Address Book=KEY_ADDRESS_BOOK
+2 Spaminator=KEY_SPAMINATOR
+1 Error Messages
+2 Creating Email=KEY_CREATE_EMAIL_ERROR
+2 Receiving Email=KEY_ERRORS_RECEIVE
+2 Sending Email=KEY_ERRORS_SEND
+2 Spaminator=KEY_SPAMINATOR_ERROR
+2 Getting Support=KEY_GETTING_SUPPORT
+2 Application Stability Issues=KEY_APPLICATION_STABILITY
+
+

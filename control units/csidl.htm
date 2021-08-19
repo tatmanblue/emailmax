@@ -1,0 +1,402 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>CSIDL Values Enumerated Type</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<h1>CSIDL Values Enumerated Type</h1>
+
+<hr size="1">
+
+<p>Applications frequently use a number of folders which might
+not have the same name or location on any given system. For
+example, the system folder might be called C:\Windows on one
+system and C:\Winnt on another. CSIDL values provide a unique
+system-independent way to identify these special folders. The
+values supersede the use of environment variables for this
+purpose. </p>
+
+<p>You use a CSIDL in conjunction with one of four Shell
+functions, <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_SHGetFolderLocation">SHGetFolderLocation </MSHELP:LINK>, <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_SHGetFolderPath">SHGetFolderPath </MSHELP:LINK>, <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_SHGetSpecialFolderLocation">SHGetSpecialFolderLocation
+</MSHELP:LINK>, and <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_SHGetSpecialFolderPath">SHGetSpecialFolderPath </MSHELP:LINK>, to retrieve a special folder's
+path name or pointer to an item identifier list (PIDL) .</p>
+
+<p>Most CSIDLs correspond to either file system folders or
+virtual folders. Where the CSIDL identifies a file system folder,
+a commonly used path is given as an example. Other paths can be
+used. Some CSIDLs can be mapped to an equivalent %VariableName%
+environment variable. CSIDLs are more reliable, however, and
+should be used if possible. </p>
+
+<p class="clsRef">Syntax</p>
+
+<blockquote>
+    <pre class="clsSyntax">typedef enum {
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_DESKTOP = 0x0000,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_INTERNET = 0x0001,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_PROGRAMS = 0x0002,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_CONTROLS = 0x0003,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_PRINTERS = 0x0004,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_PERSONAL = 0x0005,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_FAVORITES = 0x0006,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_STARTUP = 0x0007,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_RECENT = 0x0008,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_SENDTO = 0x0009,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_BITBUCKET = 0x000A,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_STARTMENU = 0x000B,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_MYDOCUMENTS = 0x000C,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_MYMUSIC = 0x000D,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_MYVIDEO = 0x000E,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_DESKTOPDIRECTORY = 0x0010,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_DRIVES = 0x0011,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_NETWORK = 0x0012,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_NETHOOD = 0x0013,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_FONTS = 0x0014,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_TEMPLATES = 0x0015,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_STARTMENU = 0x016,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_PROGRAMS = 0x0017,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_STARTUP = 0x0018,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_DESKTOPDIRECTORY = 0x0019,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_APPDATA = 0x001A,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_PRINTHOOD = 0x001B,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_LOCAL_APPDATA = 0x001C,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_ALTSTARTUP = 0x001D,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_ALTSTARTUP = 0x001E,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_FAVORITES = 0x001F,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_INTERNET_CACHE = 0x0020,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COOKIES = 0x0021,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_HISTORY = 0x0022,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_APPDATA = 0x0023,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_WINDOWS = 0x0024,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_SYSTEM = 0x0025,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_PROGRAM_FILES = 0x0026,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_MYPICTURES = 0x0027,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_PROFILE = 0x0028,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_SYSTEMX86 = 0x0029,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_PROGRAM_FILESX86 = 0x002A,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_PROGRAM_FILES_COMMON = 0x002B,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_PROGRAM_FILES_COMMONX86 = 0x002C,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_TEMPLATES = 0x002D,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_DOCUMENTS = 0x002E,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_ADMINTOOLS = 0x002F,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_ADMINTOOLS = 0x0030,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_CONNECTIONS = 0x0031,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_MUSIC = 0x0035,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_PICTURES = 0x0036,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_VIDEO = 0x0037,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_RESOURCES = 0x0038,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_RESOURCES_LOCALIZED = 0x0039,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMMON_OEM_LINKS = 0x003A,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_CDBURN_AREA = 0x003B,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_COMPUTERSNEARME = 0x003D,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_FLAG_PER_USER_INIT = 0x0800,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_FLAG_NO_ALIAS = 0x1000,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_FLAG_DONT_VERIFY = 0x4000,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_FLAG_CREATE = 0x8000,
+&nbsp;&nbsp;&nbsp;&nbsp;CSIDL_FLAG_MASK = 0xFF00
+} CSIDL Values;
+</pre>
+</blockquote>
+
+<p class="clsRef">Constants</p>
+
+<blockquote>
+    <dl>
+        <dt><a name="CSIDL_DESKTOP">CSIDL_DESKTOP</a> </dt>
+        <dd>Windows desktop&#151;virtual folder that is the root
+            of the name space. </dd>
+        <dt><a name="CSIDL_INTERNET">CSIDL_INTERNET</a> </dt>
+        <dd>Virtual folder that represents the Internet. </dd>
+        <dt><a name="CSIDL_PROGRAMS">CSIDL_PROGRAMS</a> </dt>
+        <dd>File system directory that contains the user's
+            program groups (which are also file system
+            directories). A typical path is C:\Documents and
+            Settings\username\Start Menu\Programs. </dd>
+        <dt><a name="CSIDL_CONTROLS">CSIDL_CONTROLS</a> </dt>
+        <dd>Virtual folder that contains icons for Control Panel
+            applications. </dd>
+        <dt><a name="CSIDL_PRINTERS">CSIDL_PRINTERS</a> </dt>
+        <dd>Virtual folder that contains installed printers. </dd>
+        <dt><a name="CSIDL_PERSONAL">CSIDL_PERSONAL</a> </dt>
+        <dd>File system directory that serves as a common
+            repository for documents. A typical path is C:\Documents
+            and Settings\username\My Documents. This is different
+            from the My Documents virtual folder in the name
+            space. To access that virtual folder, use the
+            technique described in <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_shell_manage">Managing the File System </MSHELP:LINK>. </dd>
+        <dt><a name="CSIDL_FAVORITES">CSIDL_FAVORITES</a> </dt>
+        <dd>File system directory that serves as a common
+            repository for the user's favorite items. A typical
+            path is C:\Documents and Settings\username\Favorites.
+        </dd>
+        <dt><a name="CSIDL_STARTUP">CSIDL_STARTUP</a> </dt>
+        <dd>File system directory that corresponds to the user's
+            Startup program group. The system starts these
+            programs whenever any user logs onto Microsoft®
+            Windows NT® or starts Microsoft Windows® 98. A
+            typical path is C:\Documents and
+            Settings\username\Start Menu\Programs\Startup. </dd>
+        <dt><a name="CSIDL_RECENT">CSIDL_RECENT</a> </dt>
+        <dd>File system directory that contains the user's most
+            recently used documents. A typical path is C:\Documents
+            and Settings\username\Recent. To create a shortcut in
+            this folder, use <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_SHAddToRecentDocs">SHAddToRecentDocs </MSHELP:LINK>. In addition to
+            creating the shortcut, this function updates the
+            Shell's list of recent documents and adds the
+            shortcut to the Documents submenu of the Start menu. </dd>
+        <dt><a name="CSIDL_SENDTO">CSIDL_SENDTO</a> </dt>
+        <dd>File system directory that contains Send To menu
+            items. A typical path is C:\Documents and
+            Settings\username\SendTo. </dd>
+        <dt><a name="CSIDL_BITBUCKET">CSIDL_BITBUCKET</a> </dt>
+        <dd>Virtual folder that contains the objects in the
+            user's Recycle Bin. </dd>
+        <dt><a name="CSIDL_STARTMENU">CSIDL_STARTMENU</a> </dt>
+        <dd>File system directory that contains Start Menu items.
+            A typical path is C:\Documents and
+            Settings\username\Start Menu. </dd>
+        <dt><a name="CSIDL_MYDOCUMENTS">CSIDL_MYDOCUMENTS</a> </dt>
+        <dd>Virtual folder that contains the objects in the
+            user's My Documents folder.</dd>
+        <dt><a name="CSIDL_MYMUSIC">CSIDL_MYMUSIC</a> </dt>
+        <dd>File system directory that serves as a common
+            repository for music files. A typical path is C:\My
+            Music. </dd>
+        <dt><a name="CSIDL_MYVIDEO">CSIDL_MYVIDEO</a> </dt>
+        <dd>File system directory that serves as a common
+            repository for video files. </dd>
+        <dt><a name="CSIDL_DESKTOPDIRECTORY">CSIDL_DESKTOPDIRECTORY</a>
+        </dt>
+        <dd>File system directory used to physically store file
+            objects on the desktop (not to be confused with the
+            desktop folder itself). A typical path is C:\Documents
+            and Settings\username\Desktop </dd>
+        <dt><a name="CSIDL_DRIVES">CSIDL_DRIVES</a> </dt>
+        <dd>My Computer&#151;virtual folder that contains
+            everything on the local computer: storage devices,
+            printers, and Control Panel. The folder can also
+            contain mapped network drives. </dd>
+        <dt><a name="CSIDL_NETWORK">CSIDL_NETWORK</a> </dt>
+        <dd>Network Neighborhood&#151;virtual folder that
+            represents the root of the network namespace
+            hierarchy. </dd>
+        <dt><a name="CSIDL_NETHOOD">CSIDL_NETHOOD</a> </dt>
+        <dd>A file system folder that contains the link objects
+            that can exist in the My Network Places virtual
+            folder. It is not the same as <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_csidl_cpp">CSIDL </MSHELP:LINK>, which
+            represents the network namespace root. A typical path
+            is C:\Documents and Settings\username\NetHood. </dd>
+        <dt><a name="CSIDL_FONTS">CSIDL_FONTS</a> </dt>
+        <dd>Virtual folder that contains fonts. A typical path is
+            C:\WINNT\Fonts. </dd>
+        <dt><a name="CSIDL_TEMPLATES">CSIDL_TEMPLATES</a> </dt>
+        <dd>File system directory that serves as a common
+            repository for document templates. </dd>
+        <dt><a name="CSIDL_COMMON_STARTMENU">CSIDL_COMMON_STARTMENU</a>
+        </dt>
+        <dd>File system directory that contains the programs and
+            folders that appear on the Start Menu for all users.
+            A typical path is C:\Documents and Settings\All
+            Users\Start Menu. Valid only for Windows NT systems. </dd>
+        <dt><a name="CSIDL_COMMON_PROGRAMS">CSIDL_COMMON_PROGRAMS</a>
+        </dt>
+        <dd>File system directory that contains the directories
+            for the common program groups that appear in the
+            Start Menu for all users. A typical path is C:\Documents
+            and Settings\All Users\Start Menu\Programs. Valid
+            only for Windows NT systems. </dd>
+        <dt><a name="CSIDL_COMMON_STARTUP">CSIDL_COMMON_STARTUP</a>
+        </dt>
+        <dd>File system directory that contains the programs that
+            appear in the Startup folder for all users. A typical
+            path is C:\Documents and Settings\All Users\Start
+            Menu\Programs\Startup. Valid only for Windows NT
+            systems. </dd>
+        <dt><a name="CSIDL_COMMON_DESKTOPDIRECTORY">CSIDL_COMMON_DESKTOPDIRECTORY</a>
+        </dt>
+        <dd>File system directory that contains files and folders
+            that appear on the desktop for all users. A typical
+            path is C:\Documents and Settings\All Users\Desktop.
+            Valid only for Windows NT systems. </dd>
+        <dt><a name="CSIDL_APPDATA">CSIDL_APPDATA</a> </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 4.71 </MSHELP:LINK>. File system directory that serves as a
+            common repository for application-specific data. A
+            typical path is C:\Documents and
+            Settings\username\Application Data. This CSIDL is
+            supported by the redistributable ShFolder.dll for
+            systems that do not have the Microsoft Internet
+            Explorer 4.0 integrated Shell installed. </dd>
+        <dt><a name="CSIDL_PRINTHOOD">CSIDL_PRINTHOOD</a> </dt>
+        <dd>File system directory that contains the link objects
+            that can exist in the Printers virtual folder. A
+            typical path is C:\Documents and
+            Settings\username\PrintHood. </dd>
+        <dt><a name="CSIDL_LOCAL_APPDATA">CSIDL_LOCAL_APPDATA</a>
+        </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 5.0 </MSHELP:LINK>. File system directory that serves as a
+            data repository for local (nonroaming) applications.
+            A typical path is C:\Documents and
+            Settings\username\Local Settings\Application Data. </dd>
+        <dt><a name="CSIDL_ALTSTARTUP">CSIDL_ALTSTARTUP</a> </dt>
+        <dd>File system directory that corresponds to the user's
+            nonlocalized Startup program group. </dd>
+        <dt><a name="CSIDL_COMMON_ALTSTARTUP">CSIDL_COMMON_ALTSTARTUP</a>
+        </dt>
+        <dd>File system directory that corresponds to the
+            nonlocalized Startup program group for all users.
+            Valid only for Windows NT systems. </dd>
+        <dt><a name="CSIDL_COMMON_FAVORITES">CSIDL_COMMON_FAVORITES</a>
+        </dt>
+        <dd>File system directory that serves as a common
+            repository for all user's favorite items. Valid only
+            for Windows NT systems. </dd>
+        <dt><a name="CSIDL_INTERNET_CACHE">CSIDL_INTERNET_CACHE</a>
+        </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 4.72 </MSHELP:LINK>. File system directory that serves as a
+            common repository for temporary Internet files. A
+            typical path is C:\Documents and
+            Settings\username\Temporary Internet Files. </dd>
+        <dt><a name="CSIDL_COOKIES">CSIDL_COOKIES</a> </dt>
+        <dd>File system directory that serves as a common
+            repository for Internet cookies. A typical path is C:\Documents
+            and Settings\username\Cookies. </dd>
+        <dt><a name="CSIDL_HISTORY">CSIDL_HISTORY</a> </dt>
+        <dd>File system directory that serves as a common
+            repository for Internet history items. </dd>
+        <dt><a name="CSIDL_COMMON_APPDATA">CSIDL_COMMON_APPDATA</a>
+        </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 5.0 </MSHELP:LINK>. Application data for all users. A
+            typical path is C:\Documents and Settings\All
+            Users\Application Data. </dd>
+        <dt><a name="CSIDL_WINDOWS">CSIDL_WINDOWS</a> </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 5.0 </MSHELP:LINK>. Windows directory or SYSROOT. This
+            corresponds to the %windir% or %SYSTEMROOT%
+            environment variables. A typical path is C:\WINNT. </dd>
+        <dt><a name="CSIDL_SYSTEM">CSIDL_SYSTEM</a> </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 5.0 </MSHELP:LINK>. System folder. A typical path is C:\WINNT\SYSTEM32.
+        </dd>
+        <dt><a name="CSIDL_PROGRAM_FILES">CSIDL_PROGRAM_FILES</a>
+        </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 5.0 </MSHELP:LINK>. Program Files folder. A typical path is
+            C:\Program Files. </dd>
+        <dt><a name="CSIDL_MYPICTURES">CSIDL_MYPICTURES</a> </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 5.0 </MSHELP:LINK>. My Pictures folder. A typical path is C:\Documents
+            and Settings\username\My Documents\My Pictures. </dd>
+        <dt><a name="CSIDL_PROFILE">CSIDL_PROFILE</a> </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 5.0 </MSHELP:LINK>. User's profile folder. </dd>
+        <dt><a name="CSIDL_SYSTEMX86">CSIDL_SYSTEMX86</a> </dt>
+        <dd>The x86 system directory on Reduced Instruction Set
+            Computer (RISC) systems. </dd>
+        <dt><a name="CSIDL_PROGRAM_FILESX86">CSIDL_PROGRAM_FILESX86</a>
+        </dt>
+        <dd>The x86 Program Files folder on RISC systems. </dd>
+        <dt><a name="CSIDL_PROGRAM_FILES_COMMON">CSIDL_PROGRAM_FILES_COMMON</a>
+        </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 5.0 </MSHELP:LINK>. A folder for components that are shared
+            across applications. A typical path is C:\Program
+            Files\Common. Valid only for Windows NT and Windows
+            2000 systems. </dd>
+        <dt><a name="CSIDL_PROGRAM_FILES_COMMONX86">CSIDL_PROGRAM_FILES_COMMONX86</a>
+        </dt>
+        <dd>The x86 Program Files Common folder on RISC systems. </dd>
+        <dt><a name="CSIDL_COMMON_TEMPLATES">CSIDL_COMMON_TEMPLATES</a>
+        </dt>
+        <dd>File system directory that contains the templates
+            that are available to all users. A typical path is C:\Documents
+            and Settings\All Users\Templates. Valid only for
+            Windows NT systems. </dd>
+        <dt><a name="CSIDL_COMMON_DOCUMENTS">CSIDL_COMMON_DOCUMENTS</a>
+        </dt>
+        <dd>File system directory that contains documents that
+            are common to all users. Typical paths are C:\Documents
+            and Settings\All Users\Documents. Valid for Windows
+            NT systems and Windows 95 and Windows 98 systems with
+            Shfolder.dll installed. </dd>
+        <dt><a name="CSIDL_COMMON_ADMINTOOLS">CSIDL_COMMON_ADMINTOOLS</a>
+        </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 5.0 </MSHELP:LINK>. File system directory that contains
+            administrative tools for all users. </dd>
+        <dt><a name="CSIDL_ADMINTOOLS">CSIDL_ADMINTOOLS</a> </dt>
+        <dd><MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_Shell_Versions">Version 5.0 </MSHELP:LINK>. File system directory used to store
+            administrative tools for an individual user. The
+            Microsoft Management Console (MMC) saves customized
+            consoles to this directory, and it roams with the
+            user. </dd>
+        <dt><a name="CSIDL_CONNECTIONS">CSIDL_CONNECTIONS</a> </dt>
+        <dd>Virtual folder that contains network and dial-up
+            connections. </dd>
+        <dt><a name="CSIDL_COMMON_MUSIC">CSIDL_COMMON_MUSIC</a> </dt>
+        <dd>My Music folder for all users. For more information,
+            see <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_csidl_cpp">CSIDL </MSHELP:LINK>. </dd>
+        <dt><a name="CSIDL_COMMON_PICTURES">CSIDL_COMMON_PICTURES</a>
+        </dt>
+        <dd>My Pictures folder for all users. For more
+            information, see <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_csidl_cpp">CSIDL </MSHELP:LINK>. </dd>
+        <dt><a name="CSIDL_COMMON_VIDEO">CSIDL_COMMON_VIDEO</a> </dt>
+        <dd>My Video folder for all users. For more information,
+            see <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_csidl_cpp">CSIDL </MSHELP:LINK>. </dd>
+        <dt><a name="CSIDL_RESOURCES">CSIDL_RESOURCES</a> </dt>
+        <dd>System resource directory. A typical path is C:\WINNT\Resources.
+        </dd>
+        <dt><a name="CSIDL_RESOURCES_LOCALIZED">CSIDL_RESOURCES_LOCALIZED</a>
+        </dt>
+        <dd>Localized resource directory. For more information,
+            see <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_csidl_cpp">CSIDL </MSHELP:LINK>. </dd>
+        <dt><a name="CSIDL_COMMON_OEM_LINKS">CSIDL_COMMON_OEM_LINKS</a>
+        </dt>
+        <dd>Folder containing links to OEM specific applications
+            for all users. </dd>
+        <dt><a name="CSIDL_CDBURN_AREA">CSIDL_CDBURN_AREA</a> </dt>
+        <dd>File system folder used to hold data for burning to a
+            CD. Typically [User Profile Folder]\Local
+            Settings\Applications Data\Microsoft\CD Burning. </dd>
+        <dt><a name="CSIDL_COMPUTERSNEARME">CSIDL_COMPUTERSNEARME</a>
+        </dt>
+        <dd>Computers Near Me folder. Virtual folder that
+            contains links to nearby computers on the network.
+            Nearness it is established by common work group
+            membership. </dd>
+        <dt><a name="CSIDL_FLAG_PER_USER_INIT">CSIDL_FLAG_PER_USER_INIT</a>
+        </dt>
+        <dd>Combine this flag with the desired CSIDL_ value to
+            indicate per-user initialization. </dd>
+        <dt><a name="CSIDL_FLAG_NO_ALIAS">CSIDL_FLAG_NO_ALIAS</a>
+        </dt>
+        <dd>Combine this flag with the desired CSIDL_ value to
+            force a non-alias version of the PIDL. </dd>
+        <dt><a name="CSIDL_FLAG_DONT_VERIFY">CSIDL_FLAG_DONT_VERIFY</a>
+        </dt>
+        <dd>Combine this flag with the desired CSIDL_ value to
+            return an unverified folder path. </dd>
+        <dt><a name="CSIDL_FLAG_CREATE">CSIDL_FLAG_CREATE</a> </dt>
+        <dd>Combine this flag with the desired CSIDL_ value to
+            force the creation of the associated folder. </dd>
+        <dt><a name="CSIDL_FLAG_MASK">CSIDL_FLAG_MASK</a> </dt>
+        <dd>Mask for all possible CSIDL flag values. </dd>
+    </dl>
+</blockquote>
+
+<p class="clsRef">Enumerated Type&nbsp;Information</p>
+
+<blockquote>
+    <table border="0" class="clsStd">
+<TBODY>        <tr>
+            <th>Minimum operating systems</th>
+            <td>Windows 95, Windows NT 4.0, Windows XP </td>
+        </tr>
+</TBODY>    </table>
+</blockquote>
+
+<p class="clsRef">See Also</p>
+
+<blockquote>
+<MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_SHGetFolderLocation">    <p>SHGetFolderLocation </MSHELP:LINK>, <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_SHGetFolderPath">SHGetFolderPath </MSHELP:LINK>, <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_SHGetSpecialFolderLocation">SHGetSpecialFolderLocation
+</MSHELP:LINK>    , <MSHELP:LINK tabIndex="0" xmlns:MSHelp="http://msdn.microsoft.com/mshelp" keywords="_win32_SHGetSpecialFolderPath">SHGetSpecialFolderPath </MSHELP:LINK></p>
+</blockquote>
+</body>
+</html>

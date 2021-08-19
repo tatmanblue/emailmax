@@ -1,0 +1,117 @@
+0) BUG FIXES!!!
+
+1) Address Book (only thing left is resolver and supporting context menu items)
+
+2) Get the two address book screens into class hierarchy utilitizing inheritance for
+   common code
+
+3) New UI
+
+4) Encryption Wizard
+
+5) Ability to search through emails
+
+6) Keep files encrypted
+
+7) Deleting the actual attachment file should be a user defined option
+   as well as a menu command (to delete individual attachments from
+   a message)
+
+8) Update help file (ongoing)
+
+9) "animate" folder displays (out, in, etc...) icons, etc...
+
+10) send/receive for single account
+
+11) reply to all toolbar button 
+
+12) email address separators user defined?
+
+13) make form sizes/heights data driven
+
+14) right mouse click support (menus, etc...)(ongoing)
+
+15) CTRL-X, CTRL-C, CTRL-X, CTRL-INS, CTRL-DEL support for folders
+    this will copy/paste messages from one folder to another
+    (added key stroke support in wndFolder)
+    When ctrl-c or ctrl-ins is pressed on the folder windows, 
+    it copies the email to memory (as text) so that it could be pasted 
+    else where...
+
+16) read registry at startup, keep in memory (create registry object) and
+    reference this throughout the app.  When saving to the registry update
+    memory too  (started)
+
+17) UI indicating that email messages went to the trash folder and in folder
+
+18) Read/Unread fields/visual
+
+19) Get Custom folders working
+
+20) Mail to news wizard, remailer wizard
+
+21) Get customizable column information working
+
+22) automatically send email on "save" if option set
+
+23) email composer is html based
+
+24) Get HTML support working
+
+25) Strings into resource strings
+
+26) Internet timeout issues user definable
+
+27) File location user definable.
+
+28) Import Address book from outlook and csv
+
+29) Random data to a file prior to deletion
+
+30) error messages in standard emailmax dialogs
+
+31) error message help in help file
+
+32) Scan attachment for virus from software installed on PC
+
+================================================================
+BUGS
+  B1)  Save does nothing/incorrect
+  B2)  Send does not get message into out folder with updated info       
+  B3)  TO: CC fields may come on more than 1 row
+  B4)  Fix uninstall problem with long file names in uninstall information
+  B5)  
+  B6)  When closing the app, if there are messages in the out folder, 
+       ask the user if they want to send these messages before quiting....
+  B7)  
+  B8)  The notepad editor closes, without warning, if nothing was entered in
+       the body but email addresses were entered in the To field.
+  B9)  When a window opens, and its not maximized its size should not 
+       exceed that of the parent window.
+  B10) Folder icon does not change when it is emptied of items.
+  B11) Should not be able to open multiple copies of the program at the 
+       same time. 
+  B12) 
+  B13) 
+  B14) 
+  B15) Clean up from create process (release handles)
+
+BUGS I'm lost for a solution
+  X1)  Splitter bar does not appear in the middle of the outbound.dfm (out)
+       at runtime, like the other folder windows
+  X2)  Cannot move the main window around my dragging the caption bar
+  X3)  When a folder is maxmized the min, restore, window menu buttons
+       are invisible (sometimes appearing as disabled).  Sometimes after
+       restoring the window, the menu/buttons are gone too.
+
+================================================================
+DONE  07.31.02  Finished print and preview functions for all pertinent windows
+DONE  07.31.02  Toolbars buttons dynamic based on active window (flaky redraw however)
+DONE  08.06.02  Address Book MDI Child window completed
+DONE  08.10.02  Marking Draft folder as done
+FIXED 07.31.02  When the last window is closed, the toolbar does not update correctly
+FIXED 08.06.02  Filters not saving
+FIXED 08.10.02  Fixed draft folder so that items do load into it
+FIXED 08.11.02  Newsgroups selector screen is now resizable
+FIXED 
+

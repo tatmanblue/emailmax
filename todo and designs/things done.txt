@@ -1,0 +1,41 @@
+08.06.02 Finished Address Book MDI viewer screen
+         Found a bug in delphi...exceptions on Screen.Cursors[{DelphiConstant}]..eliminated references 
+         Help File updated with new address book screens.
+         Corrected bug where items were not appearing in draft folder
+         
+
+07.31.02 Print and Preview from the editors now fully implemented
+         Toolbars buttons dynamic based on active window (flaky redraw however)
+
+07.18.02 Identified problems with Network NNPOP3 control however a solution
+         is still needed.  Search comments for details.
+
+07.01.02 Fixed Problem with saving password when editing email accounts
+         If authentication fails on get email, user is prompted with chance to correct information
+
+06.18.02 Address Book feature working
+         (select and save names in the notepad--no autoresolve, no editing)
+         Spaminator has a new feature: apply rule to all email addresses
+         Works correctly in XP without special setups
+         Fixed program path problem after attaching file or saving file 
+
+05.28.02 Continued work on the stability of the program
+         Changed how file names are generated
+
+05.20.02 Replying to email with attachments no longer includes attachment
+         (Forwarding still includes attachment)
+         Receive email code changed.  Identified a bug that is outside of the control of microobjects.
+         Fixed access violation that occurred when deleting emails from a folder.
+
+01.20.02 Reception of Attachments is complete.
+         Help File Updates
+
+01.12.02 Sending of  Attachments is complete.     
+
+01.3.02  Started Addressbook (UI only)
+         When sending errors and messages are moved to draft folder, message is displayed.
+         A new mail window appears when new mail has been received.
+         Folder windows now have a preview pane.
+         Email address separators in to,cc,bcc fields are , and ;
+
+        

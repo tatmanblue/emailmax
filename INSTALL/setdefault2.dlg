@@ -1,0 +1,29 @@
+Document Type: DLG
+item: Custom Dialog
+  Name=Make Emailmax 2000 default
+  item: Dialog
+    Title=Make Emailmax 2K default
+    Width=150
+    Height=96
+    Font Name=Helv
+    Font Size=8
+    item: Radio Button
+      Rectangle=55 31 84 56
+      Variable=MAKEDEF
+      Create Flags=01010000000000010000000000001001
+      Text=&Yes
+      Text=&No
+      Text=
+    end
+    item: Push Button
+      Rectangle=101 58 136 73
+      Create Flags=01010000000000010000000000000000
+      Text=OK
+    end
+    item: Static
+      Rectangle=5 0 137 26
+      Create Flags=01010000000000000000000000000000
+      Text=Do you want Emailmax 2K to be the default email program.  Answering  yes will allow you to use Emailmax for replying to Web sites.
+    end
+  end
+end

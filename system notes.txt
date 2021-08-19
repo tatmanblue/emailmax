@@ -1,0 +1,13 @@
+-- New format
+
+1  2                       3               4  5
+
+S| raffelm@mindspring.com| mindspring.com| p| PA3a X_@34
+
+1 - Send or Receive   S R
+2 - return address information, complete
+3 - server to submit name through
+4 - SMTP or POP  p s
+5 - Encrypted Password
+
+

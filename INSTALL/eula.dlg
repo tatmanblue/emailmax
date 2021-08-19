@@ -1,0 +1,32 @@
+Document Type: DLG
+item: Custom Dialog
+  Name=Emailmax 98 EULA
+  Flags=01100011
+  item: Dialog
+    Title=Emailmax 2K EULA
+    Width=285
+    Height=200
+    Font Name=Helv
+    Font Size=8
+    item: Editbox
+      Rectangle=5 5 275 149
+      Value=%MAINDIR%\eula.txt
+      Create Flags=01010000100000000000100000000100
+    end
+    item: Push Button
+      Rectangle=164 158 236 173
+      Variable=EULA
+      Value=Y
+      Create Flags=01010000000000010000000000000000
+      Text=I Agree to the "EULA"
+    end
+    item: Push Button
+      Rectangle=238 158 273 173
+      Variable=EULA
+      Value=N
+      Action=3
+      Create Flags=01010000000000010000000000000001
+      Text=I Decline
+    end
+  end
+end

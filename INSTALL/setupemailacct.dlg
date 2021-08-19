@@ -1,0 +1,89 @@
+Document Type: DLG
+item: Custom Dialog
+  Name=Setup First Email Account
+  Flags=00100000
+  item: Dialog
+    Title=Setup First Email Account
+    Width=207
+    Height=152
+    Font Name=Helv
+    Font Size=8
+    item: Editbox
+      Rectangle=108 34 179 47
+      Variable=EMAILADDR
+      Help Context=16711680
+      Create Flags=01010000100000010000000000000000
+      Text=%EMAILADDR%
+    end
+    item: Editbox
+      Rectangle=108 50 179 63
+      Variable=SMTPNAME
+      Help Context=16711680
+      Create Flags=01010000100000010000000000000000
+      Text=%SMTPNAME%
+    end
+    item: Editbox
+      Rectangle=108 87 178 100
+      Variable=EMAILPASS
+      Help Context=16711681
+      Create Flags=01010000100000010000000000100000
+      Text=%EMAILPASS%
+    end
+    item: Push Button
+      Rectangle=124 115 159 130
+      Variable=DIALOGRES
+      Value=1
+      Create Flags=01010000000000010000000000000001
+      Text=OK
+    end
+    item: Push Button
+      Rectangle=160 115 195 130
+      Variable=DIALOGRES
+      Value=0
+      Create Flags=01010000000000010000000000000000
+      Text=Cancel
+    end
+    item: Static
+      Rectangle=63 35 110 44
+      Create Flags=01010000000000000000000000000000
+      Flags=0000000000000001
+      Name=Arial
+      Font Style=-11 0 0 0 400 0 0 0 0 3 2 1 34
+      Text=Email Address
+    end
+    item: Static
+      Rectangle=63 53 105 63
+      Create Flags=01010000000000000000000000000000
+      Flags=0000000000000001
+      Name=Arial
+      Font Style=-11 0 0 0 400 0 0 0 0 3 2 1 34
+      Text=SMTP Name
+    end
+    item: Checkbox
+      Rectangle=63 70 183 85
+      Variable=RECVTOO
+      Create Flags=01010000000000010000000000000011
+      Text=Receive email from this account, too
+      Text=
+    end
+    item: Static
+      Rectangle=62 1 194 27
+      Create Flags=01010000000000000000000000000000
+      Flags=0000000000000001
+      Name=Arial
+      Font Style=-11 0 0 0 400 0 0 0 0 3 2 1 34
+      Text=Enter information about your email account.  If you do not know this information you can enter it later.
+    end
+    item: Static
+      Rectangle=5 5 53 100
+      Action=2
+      Create Flags=01010000000000000000000000001011
+      Pathname=D:\development\emailmax\install\1MAIL.BMP
+    end
+    item: Static
+      Rectangle=63 89 98 98
+      Create Flags=01010000000000000000000000000000
+      Text=Password
+    end
+  end
+end
